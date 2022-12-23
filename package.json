@@ -22,5 +22,15 @@
     "bootstrap": "^5.2.3",
     "jquery": "^3.6.3"
   },
-  "browserslist": ["> 0.5%, last 1 version, not dead"]
+  "browserslist": [
+    "> 0.5%, last 1 version, not dead"
+  ],
+  "devDependencies": {
+    "browser-sync": "^2.27.11",
+    "gulp": "^4.0.2",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "^5.1.0",
+    "node-sass": "^8.0.0"
+  }
 }
