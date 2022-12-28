@@ -1,6 +1,7 @@
 // плагины
 const gulp = require('gulp'),//система описания задач
     plumber = require('gulp-plumber'),//плагин обработки ошибок
+    prefixer = require('gulp-autoprefixer'),
     sass = require('gulp-sass')(require('node-sass')),//компиляция SCSS в CSS
     htmlmin = require('gulp-htmlmin'),//минимизация html
     browserSync = require('browser-sync'),//веб-сервер
@@ -60,6 +61,7 @@ gulp.task('build:scss', function (done) {
         .pipe(sass({
             outputStyle: 'expanded'
         }))
+        .pipe(prefixer())
         .pipe(gulp.dest(path.build.scss))
         .pipe(reload({stream:true}));
     done();
