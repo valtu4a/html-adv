@@ -1,0 +1,27 @@
+html,body{
+  width: 100%;
+  height: 100%;
+}
+body{
+  display: flex;
+  flex-direction: column;
+
+}
+.page{
+  flex: 1;
+}
+
+.btn-main{
+  @extend %test-btn;
+  background: #0dcaf0;
+}
+
+.btn-new{
+  @extend %test-btn;
+  background: violet;
+}
+
+.btn-apply{
+  @extend %test-btn;
+  background: green;
+}
