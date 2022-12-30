@@ -1,3 +1,12 @@
+%footer-link{
+  color: var(--footer-text-color);
+  text-decoration: none;
+  &:hover {
+    color: var(--footer-text-hover-color);
+    text-decoration: underline;
+  }
+}
+
 %test-btn {
   background: #09c;
   padding: .5rem 1.5rem;

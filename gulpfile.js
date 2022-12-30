@@ -54,6 +54,14 @@ gulp.task('build:html', function (done) {
     done();
 });
 
+// задача копирования шрифтов
+gulp.task('mv:fonts', function (done) {
+    gulp.src(path.src.fonts)
+        .pipe(gulp.dest(path.build.fonts))
+        .pipe(reload({stream:true}));
+    done();
+});
+
 //задача компиляции scss в css
 gulp.task('build:scss', function (done) {
     gulp.src(path.src.scss)
@@ -75,7 +83,8 @@ gulp.task('webserver', function (done) {
 gulp.task('watch', function (done) {
   gulp.watch(path.watch.html, gulp.series('build:html'));
   gulp.watch(path.watch.scss, gulp.series('build:scss'));
+  gulp.watch(path.watch.fonts, gulp.series('mv:fonts'));
     done();
 });
 
-gulp.task('default', gulp.series(gulp.parallel('build:html','build:scss'),'watch','webserver'));
+gulp.task('default', gulp.series(gulp.parallel('build:html','build:scss','mv:fonts'),'watch','webserver'));

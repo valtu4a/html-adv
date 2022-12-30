@@ -4,6 +4,15 @@
 @import "shortcuts";
 @import "https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap";
 
+@import "vendor/fontawesome/brands";
+@import "vendor/fontawesome/fontawesome";
+@import "vendor/fontawesome/solid";
+@import "vendor/fontawesome/regular";
+@import "vendor/fontawesome/v4-shims";
+
+@import "layout/header";
 @import "layout/page";
+@import "layout/elements";
+@import "layout/reviews";
 @import "layout/footer";
 
