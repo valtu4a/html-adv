@@ -5,6 +5,8 @@ const gulp = require('gulp'),//система описания задач
     sass = require('gulp-sass')(require('node-sass')),//компиляция SCSS в CSS
     htmlmin = require('gulp-htmlmin'),//минимизация html
     browserSync = require('browser-sync'),//веб-сервер
+    rigger = require('gulp-rigger'),//собрать в одном файле скрипты
+    terser = require('gulp-terser'),//минимизировать код
     reload = browserSync.reload;//перегрузить страницу в браузере
 
 // пути
@@ -62,6 +64,16 @@ gulp.task('mv:fonts', function (done) {
     done();
 });
 
+gulp.task('build:js', function (done) {
+    gulp.src(path.src.js)
+        .pipe(plumber())
+        .pipe(rigger())
+        .pipe(terser())
+        .pipe(gulp.dest(path.build.js))
+        .pipe(reload({stream:true}));
+    done();
+});
+
 //задача компиляции scss в css
 gulp.task('build:scss', function (done) {
     gulp.src(path.src.scss)
@@ -84,7 +96,8 @@ gulp.task('watch', function (done) {
   gulp.watch(path.watch.html, gulp.series('build:html'));
   gulp.watch(path.watch.scss, gulp.series('build:scss'));
   gulp.watch(path.watch.fonts, gulp.series('mv:fonts'));
-    done();
+  gulp.watch(path.watch.js, gulp.series('build:js'));
+  done();
 });
 
-gulp.task('default', gulp.series(gulp.parallel('build:html','build:scss','mv:fonts'),'watch','webserver'));
+gulp.task('default', gulp.series(gulp.parallel('build:html','build:scss','build:js','mv:fonts'),'watch','webserver'));
