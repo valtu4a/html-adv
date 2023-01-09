@@ -24412,6 +24412,111 @@ body {
   transition: .3s ease-in-out;
 }
 
+.section-person {
+  padding: 3rem 0;
+}
+
+.person__grid {
+  --grid-columns:4;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(var(--grid-columns), 1fr);
+}
+
+@media (min-width: 576px) {
+  .person__grid {
+    --grid-columns:1;
+  }
+}
+
+@media (min-width: 768px) {
+  .person__grid {
+    --grid-columns:2;
+  }
+}
+
+@media (min-width: 992px) {
+  .person__grid {
+    --grid-columns:3;
+  }
+}
+
+@media (min-width: 1200px) {
+  .person__grid {
+    --grid-columns:4;
+  }
+}
+
+@media (min-width: 1400px) {
+  .person__grid {
+    --grid-columns:4;
+  }
+}
+
+.person__card {
+  --person-card-radius:.5rem;
+  --person-avatar-size: 100px;
+  --person-card-gap:.5rem;
+  --person-card-padding: 2rem;
+  --person-card-bg: #fff;
+  display: flex;
+  padding: calc(var(--person-avatar-size) / 2 + var(--person-card-gap)) var(--person-card-padding) var(--person-card-padding);
+  flex-direction: column;
+  position: relative;
+  border-radius: var(--person-card-radius);
+  box-shadow: var(--shadow-level-2);
+  gap: var(--person-card-gap);
+  margin-bottom: calc(var(--person-avatar-size) / 2 + 1rem);
+  background: var(--person-card-bg);
+  transition: .5s ease-in-out;
+}
+
+.person__card:hover {
+  box-shadow: var(--shadow-level-3);
+}
+
+.person__avatar {
+  order: -1;
+  width: var(--person-avatar-size);
+  height: var(--person-avatar-size);
+  border-radius: 50%;
+  box-shadow: var(--shadow-level-1);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.person__name {
+  color: var(--heading-color);
+  font-size: 1rem;
+  text-align: center;
+  line-height: var(--heading-line-height);
+}
+
+.person__desc {
+  color: var(--text-color);
+  font-size: .75rem;
+  margin-bottom: var(--person-card-gap);
+}
+
+.person__position {
+  color: var(--text-color);
+  text-align: center;
+  font-size: .875rem;
+}
+
+.person__socials {
+  display: flex;
+  justify-content: center;
+  gap: var(--person-card-gap);
+}
+
+.person__socials-link {
+  text-decoration: none;
+  font-size: 1.25rem;
+}
+
 .footer {
   --footer-gap: 2rem;
   --footer-grid-count: 3;
