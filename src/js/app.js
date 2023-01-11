@@ -13,8 +13,9 @@ window.addEventListener('scroll', ()=>{
 $(document).ready(function (){
     $(".owl-carousel").owlCarousel({
             loop:true,
-            margin:16,
+            margin:20,
             responsiveClass:true,
+            stagePadding: 16,
             navText:['<i class="fa fa-angle-left"></i>','<i class="fa fa-angle-right"></i>'],
             responsive:{
                 0:{
