@@ -27,7 +27,7 @@
     border-radius: var(--person-card-radius);
     box-shadow: var(--shadow-level-2);
     gap:var(--person-card-gap);
-    margin-bottom: calc(var(--person-avatar-size) / 2 + 1rem);
+    //margin-bottom: calc(var(--person-avatar-size) / 2 + 1rem);
     background: var(--person-card-bg);
     transition: .5s ease-in-out;
     &:hover{
