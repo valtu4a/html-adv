@@ -1,6 +1,5 @@
-.owl--person {
-	padding:1rem;
-	color: #fff;
+
+.owl-theme {
 	// Styling Next and Prev buttons
 	.owl-nav {
 		margin-top: 10px;
@@ -12,15 +11,14 @@
 			font-size: $nav-font-size;
 			margin: $nav-margin;
 			padding: $nav-padding;
-			background: #fff;
+			background: $nav-background;
 			display: inline-block;
 			cursor: pointer;
-			//border-radius: 3px;
+			border-radius: 3px;
 
 			&:hover {
 				background: $nav-background-hover;
-				//color:$nav-color-hover;
-				color:black;
+				color:$nav-color-hover;
 				text-decoration: none;
 			}
 		}
@@ -30,27 +28,6 @@
 		}
 	}
 
-	.owl-prev,
-	.owl-next{
-		position: absolute;
-		top: 50%;
-		width: 3rem;
-		height: 75%;
-		//border-radius: 1rem;
-		background: #fff;
-		//box-shadow: var(--shadow-level-1);
-	}
-	.owl-prev{
-		color: #fff;
-		left: .5rem;
-		background: linear-gradient(90deg, rgba(11, 11, 11, 0.4) 0%, rgba(11, 11, 11, 0) 100%) !important;
-		transform: translate(-50%,-50%);
-	}
-	.owl-next{
-		right: .5rem;
-		background: linear-gradient(270deg, rgba(11, 11, 11, 0.4) 0%, rgba(11, 11, 11, 0) 100%) !important;
-		transform: translate(50%,-50%);
-	}
 	// Styling dots
 	.owl-nav.disabled + .owl-dots {
 		margin-top: 10px;
@@ -83,9 +60,5 @@
 				}
 			}
 		}
-	}
-
-	.owl-stage-outer{
-		padding: 4rem 0 1rem;
 	}
 }
