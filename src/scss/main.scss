@@ -11,12 +11,18 @@
 @import "vendor/fontawesome/v4-shims";
 
 @import "vendor/owl-carousel/owl.carousel";
+@import "vendor/swiper/swiper";
+@import "vendor/swiper/pagination";
+@import "vendor/swiper/navigation";
+@import "vendor/swiper/override";
 
 @import "layout/header";
 @import "layout/page";
 @import "layout/elements";
 @import "layout/reviews";
 @import "layout/person";
+@import "layout/maps";
+
 @import "layout/footer";
 
 

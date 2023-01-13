@@ -97,6 +97,51 @@
             earum est neque nostrum odio odit, praesentium quos recusandae reprehenderit repudiandae sequi vero
             voluptatem?</p>
     </div>
+    <div class="section-flow">
+        <div class="swiper flowSwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide swiper-slide--card">
+                    <div class="person__card">
+                        <img src="https://randomuser.me/api/portraits/men/21.jpg" alt="Петров Виктор Андреевич" class="person__avatar">
+                        <div class="person__name">Петров Виктор Андреевич</div>
+                        <div class="person__position">заместитель директора</div>
+                        <div class="person__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, sunt, tempore! Amet atque delectus dolore eaque est necessitatibus odit omnis ratione repudiandae vel! Consequatur id in perspiciatis quia quos vero?</div>
+                        <div class="person__socials">
+                            <a href="" class="person__socials-link fa fa-vk"></a>
+                            <a href="" class="person__socials-link fa fa-odnoklassniki-square"></a>
+                            <a href="" class="person__socials-link fa fa-telegram"></a>
+                            <a href="" class="person__socials-link fa fa-whatsapp"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide swiper-slide--cover">
+                    <img src="https://swiperjs.com/demos/images/nature-2.jpg"  alt="">
+                </div>
+                <div class="swiper-slide swiper-slide--cover">
+                    <img src="https://swiperjs.com/demos/images/nature-3.jpg"  alt="">
+                </div>
+                <div class="swiper-slide swiper-slide--cover">
+                    <img src="https://swiperjs.com/demos/images/nature-4.jpg" alt="">
+                </div>
+                <div class="swiper-slide swiper-slide--cover">
+                    <img src="https://swiperjs.com/demos/images/nature-5.jpg"  alt="">
+                </div>
+                <div class="swiper-slide swiper-slide--cover">
+                    <img src="https://swiperjs.com/demos/images/nature-6.jpg"  alt="">
+                </div>
+                <div class="swiper-slide swiper-slide--cover">
+                    <img src="https://swiperjs.com/demos/images/nature-7.jpg"  alt="">
+                </div>
+                <div class="swiper-slide swiper-slide--cover">
+                    <img src="https://swiperjs.com/demos/images/nature-8.jpg"  alt="">
+                </div>
+            </div>
+            <div class="swiper-grad"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
     <div class="section-person">
         <div class="container">
             <div class="owl-carousel owl--person">
@@ -151,7 +196,13 @@
             </div>
         </div>
     </div>
-</div>
+    <div id="map"
+         class="map"
+         data-points="[{&quot;lat&quot;:59.934199,&quot;lng&quot;:30.324465}]"
+         data-icon="img/map-marker.svg"
+         data-title="Казанский собор" data-zoom="18"></div>
+    </div>
+
 
 <div class="footer">
     <svg class="footer__wave" viewBox="0 0 1366 136" preserveAspectRatio="none">
@@ -200,7 +251,9 @@
     </div>
 </div>
 <a class="to-top-btn to-top-btn--hidden fa fa-angle-up" href="#"></a>
+<script src="https://api-maps.yandex.ru/2.1/?apikey=ca5420c2-09cf-49d3-ba00-d88d2aaa8a76&amp;lang=ru" defer></script>
 <script src="js/libs.js"></script>
 <script src="js/app.js"></script>
+<script src="js/ymaps.js" defer></script>
 </body>
 </html>

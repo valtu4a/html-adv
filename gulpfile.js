@@ -21,7 +21,7 @@ const path = {
     src: {
         html: 'src/*.{html,htm}',
         scss: 'src/scss/main.scss',
-        js: ['src/js/libs.js', 'src/js/app.js'],
+        js: ['src/js/libs.js', 'src/js/app.js', 'src/js/maps/ymaps.js'],
         img: 'src/img/**/*.{jpg,png,gif,svg,jpeg,webp}',
         fonts: 'src/fonts/**/*.{eot,ttf,woff,woff2,svg,otf}'
     },
@@ -64,6 +64,13 @@ gulp.task('mv:fonts', function (done) {
     done();
 });
 
+gulp.task('mv:img', function (done) {
+    gulp.src(path.src.img)
+        .pipe(gulp.dest(path.build.img))
+        .pipe(reload({stream:true}));
+    done();
+});
+
 gulp.task('build:js', function (done) {
     gulp.src(path.src.js)
         .pipe(plumber())
@@ -97,7 +104,8 @@ gulp.task('watch', function (done) {
   gulp.watch(path.watch.scss, gulp.series('build:scss'));
   gulp.watch(path.watch.fonts, gulp.series('mv:fonts'));
   gulp.watch(path.watch.js, gulp.series('build:js'));
+  gulp.watch(path.watch.js, gulp.series('mv:img'));
   done();
 });
 
-gulp.task('default', gulp.series(gulp.parallel('build:html','build:scss','build:js','mv:fonts'),'watch','webserver'));
+gulp.task('default', gulp.series(gulp.parallel('build:html','build:scss','build:js','mv:fonts','mv:img'),'watch','webserver'));
