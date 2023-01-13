@@ -34,6 +34,20 @@ const swiper = new Swiper(".flowSwiper", {
     },
 });
 
+const slider = new Swiper(".sliderSwiper", {
+    cssMode: true,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true
+    },
+    mousewheel: true,
+    keyboard: true,
+});
+
 $(document).ready(function (){
     $(".owl-carousel").owlCarousel({
             loop:true,
