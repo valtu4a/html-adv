@@ -35,8 +35,7 @@
 		position: absolute;
 		top: 50%;
 		width: 3rem;
-		height: 75%;
-		//border-radius: 1rem;
+		height: calc(100% - 8.65625rem - 10px);
 		background: #fff;
 		//box-shadow: var(--shadow-level-1);
 	}

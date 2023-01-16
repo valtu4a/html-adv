@@ -15,6 +15,7 @@ $(document).ready(function (){
             loop:true,
             margin:20,
             responsiveClass:true,
+            nav:true,
             stagePadding: 16,
             navText:['<i class="fa fa-angle-left"></i>','<i class="fa fa-angle-right"></i>'],
             responsive:{
@@ -31,9 +32,9 @@ $(document).ready(function (){
                     nav:true
                 },
                 1000:{
-                    items:4,
+                    items:3,
                     nav:true,
-                    loop:false
+                    loop:true,
                 }
             }
         }
