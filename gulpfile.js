@@ -7,8 +7,8 @@ const gulp = require('gulp'),//система описания задач
     browserSync = require('browser-sync'),//веб-сервер
     rigger = require('gulp-rigger'),//собрать в одном файле скрипты
     terser = require('gulp-terser'),//минимизировать код
-    reload = browserSync.reload;//перегрузить страницу в браузере
-
+    reload = browserSync.reload,//перегрузить страницу в браузере
+    rimraf = require('rimraf');//плагин удаления файлов
 // пути
 const path = {
     build: {
@@ -31,7 +31,8 @@ const path = {
         js: 'src/js/**/*.js',
         img: 'src/img/**/*.{jpg,png,gif,svg,jpeg,webp}',
         fonts: 'src/fonts/**/*.{eot,ttf,woff,woff2,svg,otf}'
-    }
+    },
+    clean: 'build/'
 };
 const config = {
     server: {
@@ -46,6 +47,9 @@ const config = {
 
 // задачи
 
+gulp.task('clean', function(done){
+    rimraf(path.clean,done);
+});
 // задача сборки html
 gulp.task('build:html', function (done) {
     gulp.src(path.src.html)
@@ -108,4 +112,4 @@ gulp.task('watch', function (done) {
   done();
 });
 
-gulp.task('default', gulp.series(gulp.parallel('build:html','build:scss','build:js','mv:fonts','mv:img'),'watch','webserver'));
+gulp.task('default', gulp.series('clean', gulp.parallel('build:html','build:scss','build:js','mv:fonts','mv:img'),'watch','webserver'));
