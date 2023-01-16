@@ -14,3 +14,25 @@
 .to-top-btn--hidden{
   display: none;
 }
+
+
+.gallery__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+}
+.gallery__item{
+  padding: 2rem;
+}
+.gallery__img{
+  display: block;
+  width: 100%;
+  border-radius: .5rem;
+  box-shadow: var(--shadow-level-2);
+  transition: .3s  ease-in-out;
+  &:hover{
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-level-3);
+  }
+}

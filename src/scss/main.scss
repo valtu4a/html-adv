@@ -14,7 +14,12 @@
 @import "vendor/swiper/swiper";
 @import "vendor/swiper/pagination";
 @import "vendor/swiper/navigation";
+@import "vendor/swiper/slider";
+@import "vendor/fancybox/jquery.fancybox";
 @import "vendor/swiper/override";
+
+
+@import "vendor/aos/aos";
 
 @import "layout/header";
 @import "layout/page";

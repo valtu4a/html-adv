@@ -36,6 +36,8 @@ const swiper = new Swiper(".flowSwiper", {
 
 const slider = new Swiper(".sliderSwiper", {
     cssMode: true,
+    loop: true,
+    grabCursor: true,
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
@@ -77,3 +79,5 @@ $(document).ready(function (){
         }
     );
 });
+
+AOS.init();
