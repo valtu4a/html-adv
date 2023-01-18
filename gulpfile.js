@@ -98,6 +98,19 @@ gulp.task('build:scss', function (done) {
     done();
 });
 
+gulp.task('dev:scss', function (done) {
+    gulp.src(path.src.scss, {sourcemaps:true} )
+        .pipe(plumber())
+        .pipe(sass({
+            outputStyle: 'expanded',
+            sourcemaps: true,
+        }))
+        .pipe(prefixer())
+        .pipe(gulp.dest(path.build.scss, {sourcemaps:'.'}))
+        .pipe(reload({stream:true}));
+    done();
+});
+
 gulp.task('webserver', function (done) {
     browserSync(config);
     done();
@@ -112,4 +125,4 @@ gulp.task('watch', function (done) {
   done();
 });
 
-gulp.task('default', gulp.series('clean', gulp.parallel('build:html','build:scss','build:js','mv:fonts','mv:img'),'watch','webserver'));
+gulp.task('default', gulp.series('clean', gulp.parallel('build:html','dev:scss','build:js','mv:fonts','mv:img'),'watch','webserver'));

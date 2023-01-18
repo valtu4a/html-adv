@@ -1,6 +1,11 @@
 .sliderSwiper {
   width: 100%;
-  height: 500px;
+  height: 700px;
+}
+
+.flowSwiper{
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .slider__slide {
@@ -20,6 +25,7 @@
   color: #fff;
   text-shadow:0 2px 3px rgba(0,0,0,.3);
 }
+
 .slider__cover{
   display: block;
   width: 100%;

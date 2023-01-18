@@ -15,7 +15,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Главная</a>
                     </li>
@@ -41,11 +41,9 @@
     </div>
 </header>
 <div class="page">
-    <div class="container">
     <div class="swiper sliderSwiper">
         <div class="swiper-wrapper">
-            <div class="swiper-slide slider__slide">
-                <img  class="slider__cover" src="https://images.unsplash.com/photo-1565498546237-caee5443b06a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1600&q=80" alt="">
+            <div class="swiper-slide slider__slide slide--cover" style="background: url('https://images.unsplash.com/photo-1565498546237-caee5443b06a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1600&q=80') no-repeat center center / cover">
                 <div class="slider__heading">lorem</div>
             </div>
             <div class="swiper-slide slider__slide">
@@ -58,8 +56,8 @@
         <div class="swiper-button-prev"></div>
         <div class="swiper-pagination"></div>
     </div>
-    </div>
     <div class="container">
+        <div class="about">
         <p>Alias animi assumenda ea eos, impedit quae sapiente ut. Aliquid dolorem facilis inventore ipsum magni natus
             nulla
             provident vitae? Amet cupiditate enim illo natus nostrum odit rerum, similique sunt. Delectus?</p>
@@ -84,6 +82,30 @@
             eaque
             earum est neque nostrum odio odit, praesentium quos recusandae reprehenderit repudiandae sequi vero
             voluptatem?</p>
+        </div>
+            <div class="video-section">
+                <div class="container">
+                    <div class="video__container">
+                        <a class="video-play video--skewed" data-fancybox="nature"  href="https://www.youtube.com/watch?v=6D_iskPXBno&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0">
+                            <div class="video-play__content">
+                                <picture class="gallery__img">
+                                    <source srcset="https://img.youtube.com/vi_webp/6D_iskPXBno/hqdefault.webp" type="image/webp">
+                                    <img src="https://img.youtube.com/vi/6D_iskPXBno/hqdefault.jpg" alt="" class="gallery__img">
+                                </picture>
+                                <div class="play-btn">
+                    <span class="play-btn__icon">
+                    <svg viewBox="0 0 32 32" class="play-btn__svg">
+                        <path d="M7.74,31.44C5.67,32.69,4,31.74,4,29.32V2.67C4,.25,5.68-.7,7.74.55L29.56,13.73c2.07,1.25,2.06,3.28,0,4.52Z"/>
+                    </svg>
+                    </span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
         <div class="gallery__grid">
             <a class="gallery__item" href="https://images.unsplash.com/photo-1546948630-1149ea60dc86?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" data-fancybox="nature" data-caption="Море">
                 <img class="gallery__img" src="https://images.unsplash.com/photo-1546948630-1149ea60dc86?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" alt="" />
@@ -91,9 +113,7 @@
             <a class="gallery__item" href="https://images.unsplash.com/photo-1426604966848-d7adac402bff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&h=800&q=80" data-fancybox="nature" data-caption="Горы и озеро">
                 <img class="gallery__img" src="https://images.unsplash.com/photo-1426604966848-d7adac402bff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&h=800&q=80" alt="Горы" />
             </a>
-            <a data-fancybox="nature"  href="https://www.youtube.com/watch?v=_sI_Ps7JSEk&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0">
-                <img class="gallery__img" src="https://images.unsplash.com/photo-1426604966848-d7adac402bff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&h=800&q=80" alt="Горы" />
-            </a>
+
         </div>
 
 
@@ -230,6 +250,14 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="section-call-to-action">
+        <div class="container call-to-action__content">
+        <div class="call-to-action__block">
+            <div class="call-to-action__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus delectus ea earum explicabo fugiat fugit illo ipsam iste, modi molestias natus omnis quasi, repellendus sed, totam. Blanditiis eveniet officiis totam.</div>
+            <a href="" class="call-to-action__btn">Призыв к действию</a>
+        </div>
         </div>
     </div>
     <div id="map"
