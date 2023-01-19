@@ -1,0 +1,42 @@
+{
+  "name": "html-adv",
+  "version": "1.0.0",
+  "description": "html and git automation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitflic.ru/project/tucha/html-adv.git"
+  },
+  "keywords": [
+    "html",
+    "git",
+    "npm"
+  ],
+  "author": "Val Tuchkevich",
+  "license": "ISC",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.2.1",
+    "aos": "^3.0.0-beta.6",
+    "bootstrap": "^5.2.3",
+    "jquery": "^3.6.3",
+    "owl-carousel": "^1.0.0",
+    "swiper": "^8.4.5"
+  },
+  "browserslist": [
+    "> 0.5%, last 1 version, not dead"
+  ],
+  "devDependencies": {
+    "browser-sync": "^2.27.11",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-plumber": "^1.2.1",
+    "gulp-rigger": "^0.5.8",
+    "gulp-sass": "^5.1.0",
+    "gulp-terser": "^2.1.0",
+    "node-sass": "^8.0.0"
+  }
+}
